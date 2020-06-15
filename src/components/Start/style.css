@@ -1,0 +1,71 @@
+.game-container{
+  width: 850px;
+  display: flex;
+  flex-wrap: wrap;
+ margin: 30px auto;
+ justify-content: space-around;
+}
+.game-card{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 250px;
+  border-bottom: 5px solid rgb(228, 108, 10);
+  box-shadow: inset 0px 0px 5px rgb(228, 108, 10);
+  border-radius: 5px;
+  margin-left: 15px;
+  margin-top: 15px;
+}
+
+.game-start-button{
+  position: relative;
+  width: 120px;
+  margin: 10px 0;
+  overflow: hidden;
+  cursor: pointer;
+  height: 30px;
+  border: 0;
+  border-radius: 10px;
+  border-style: none;
+  color:#f1f1f1;
+  background-color: #686464
+}
+.game-start-button:hover{
+  background-color:#a0575a;
+}
+.game-start-button:active, .game-start-button:focus {
+  outline: none;
+}
+.game-start-button:after {
+  content: "";
+  background: #f1f1f1;
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px !important;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+.game-start-button:active:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+@media screen and (max-width: 920px){
+  .game-container{
+    width: 600px;
+  }
+}
+@media screen and (max-width: 625px){
+  .game-container{
+    width: 300px;
+  }
+}
+
