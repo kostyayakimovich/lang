@@ -4,6 +4,7 @@
   align-items: center;
   height: 60px;
   margin: 0 40px;
+  border-bottom: 5px solid #686464;
 }
 .navigation{
   display: flex;
@@ -81,16 +82,19 @@
    height: 120px;
   }
 }
-@media screen and (max-width: 340px){
+@media screen and (max-width: 400px){
   .navigation{
    flex-direction: column;
    flex-flow: column-reverse;
  
   }
   .header{    
-   height: 180px;
+   height: 200px;
   }
   .menu-link{
     margin-bottom: 5px;
+  }
+  .styled-select-games{
+    margin-bottom: 10px;
   }
 }

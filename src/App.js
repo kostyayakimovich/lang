@@ -1,7 +1,15 @@
 import React from "react";
-import Start from "./components/Start";
 import Registration from "./components/Registration";
-//import Game from "./components/Game";
+import Start from "./components/Start";
+import AboutUs from "./components/AboutUs";
+import Vocabulary from "./components/Vocabulary";
+import Statistic from "./components/Statistic";
+import SpeakIt from "./components/SpeakIt";
+import EnglishPuzzle from "./components/EnglishPuzzle";
+import Savanna from "./components/Savanna";
+import AudioChallenge from "./components/AudioChallenge";
+import Sprint from "./components/Sprint";
+import MyGame from "./components/MyGame";
 import "./App.css";
 
 import {
@@ -16,6 +24,33 @@ export default function App() {
       <div className="wrap">
 
         <Switch>
+          <Route path="/vocabulary">
+            <Vocabulary />
+          </Route>
+          <Route path="/statistic">
+            <Statistic />
+          </Route>
+          <Route path="/aboutUs">
+            <AboutUs />
+          </Route>
+          <Route path="/speakIt">
+            <SpeakIt />
+          </Route>
+          <Route path="/englishPuzzle">
+            <EnglishPuzzle />
+          </Route>
+          <Route path="/savanna">
+            <Savanna />
+          </Route>
+          <Route path="/audioChallenge">
+            <AudioChallenge />
+          </Route>
+          <Route path="/sprint">
+            <Sprint />
+          </Route>
+          <Route path="/myGame">
+            <MyGame />
+          </Route>
           <Route path="/start">
             <Start />
           </Route>

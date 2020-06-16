@@ -1,21 +1,30 @@
 import React from "react";
-import { useHistory, useLocation } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import "./style.css";
 const Header = () => {
   let history = useHistory();
-  let location = useLocation();
-  const onClick = () => {
-    //  history.push("/game", { token: location.state.token });
+  const onClick = (path) => {
+    history.push(`/${path}`);
+  };
+  const isSelect = (event) => {
+    let valueSelect = event.target.value;
+    if (valueSelect === "Select Game") history.push("/start");
+    if (valueSelect === "SpeakIt") history.push("/speakIt");
+    if (valueSelect === "English puzzle") history.push("/englishPuzzle");
+    if (valueSelect === "Savanna") history.push("/savanna");
+    if (valueSelect === "Audio challenge") history.push("/audioChallenge");
+    if (valueSelect === "Sprint") history.push("/sprint");
+    if (valueSelect === "My game") history.push("/myGame");
   };
 
 
   return (
     <>
       <header className="header">
-        <h1 className="logo">RS Lang</h1>
+        <h1 className="logo" onClick={() => onClick("start")}>RS Lang</h1>
         <nav className="navigation">
           <li className="styled-select-games">
-            <select className="level">
+            <select className="select" onChange={isSelect}>
               <option>Select Game</option>
               <option>SpeakIt</option>
               <option>English puzzle</option>
@@ -25,8 +34,10 @@ const Header = () => {
               <option>My game</option>
             </select>
           </li>
-          <li className="menu-link">vocabulary</li>
-          <li className="menu-link" >statistic</li>
+          <li className="menu-link" onClick={() =>
+            onClick("vocabulary")}>vocabulary</li>
+          <li className="menu-link" onClick={() =>
+            onClick("statistic")}>statistic</li>
         </nav>
       </header>
 
